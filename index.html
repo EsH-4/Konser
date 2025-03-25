@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Akses Khusus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="love-container">
+        <div class="love">🐸</div>
+        <div class="love">🐸</div>
+        <div class="love">🐸</div>
+        <div class="love">🐸</div>
+        <div class="love">🐸</div>
+    </div>
+    <h1>Masukkan Kode Akses</h1>
+    <input type="password" id="kodeAkses">
+    <button onclick="cekKode()">Masuk</button>
+    <p id="pesan"></p>
+
+    <script>
+    function cekKode() {
+        var kodeYangDimasukkan = document.getElementById("kodeAkses").value;
+        var kodeBenar = "090408"; // Kode rahasia kita
+
+        if (kodeYangDimasukkan === kodeBenar) {
+            window.location.href = "main_pageX090408P.html"; // Arahkan ke halaman utama
+        } else {
+            document.getElementById("pesan").innerHTML = "Kode salah!";
+        }
+    }
+    </script>
+</body>
+</html>

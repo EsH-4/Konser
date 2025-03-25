@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e2d692, #fff3ad, #d6cc93);
+    background-size: 200% 200%;
+    animation: gradientBG 15s ease infinite;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.love-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.love {
+    position: absolute;
+    font-size: 40px;
+    color: rgba(255, 77, 109, 0.4);
+    animation: float 10s infinite;
+}
+
+.love:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.love:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+}
+
+.love:nth-child(3) {
+    left: 45%;
+    animation-delay: 4s;
+}
+
+.love:nth-child(4) {
+    left: 65%;
+    animation-delay: 1s;
+}
+
+.love:nth-child(5) {
+    left: 85%;
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) rotate(0deg) scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.6;
+        transform: translateY(80vh) rotate(90deg) scale(1.2);
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) scale(1);
+    }
+    80% {
+        opacity: 0.6;
+        transform: translateY(20vh) rotate(270deg) scale(1.2);
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+h1 {
+    color: #3ae748;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.8em;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #3ae748;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+input[type="password"] {
+    padding: 15px 25px;
+    border: 2px solid #3ae748;
+    border-radius: 30px;
+    width: 280px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 1;
+}
+
+input[type="password"]:focus {
+    border-color: #3ae748;
+    box-shadow: 0 0 15px rgba(255,77,109,0.2);
+    background: white;
+}
+
+button {
+    background-color: #3ae748;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,77,109,0.2);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #6bff84;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255,77,109,0.3);
+}
+
+#pesan {
+    color: #ff4d6d;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    min-height: 20px;
+} 
